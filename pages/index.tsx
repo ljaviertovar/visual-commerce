@@ -5,7 +5,7 @@ import { LayoutStore } from "../components/layouts"
 const Home: NextPage = () => {
 	return (
 		<LayoutStore>
-			<h1>Home Page, fores besa limpis</h1>
+			<h1>Home Page, fores besa limpis, pero tavis lo besa más rico</h1>
 		</LayoutStore>
 	)
 }
