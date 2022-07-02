@@ -6,7 +6,7 @@ const Home: NextPage = () => {
 	return (
 		<ChakraProvider>
 			<LayoutStore>
-				<h1>Home Page, fores besa limpis, pero tavis lo besa más rico</h1>
+				<h1>Home Page, fores besa limpis, pero tavis lo besa más rico siempre</h1>
 			</LayoutStore>
 		</ChakraProvider>
 	)
