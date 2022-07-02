@@ -1,12 +1,14 @@
 import type { NextPage } from "next"
 import { LayoutStore } from "../components/layouts"
-// import styles from "../styles/Home.module.css"
+import { ChakraProvider } from "@chakra-ui/react"
 
 const Home: NextPage = () => {
 	return (
-		<LayoutStore>
-			<h1>Home Page, fores besa limpis, pero tavis lo besa más rico</h1>
-		</LayoutStore>
+		<ChakraProvider>
+			<LayoutStore>
+				<h1>Home Page, fores besa limpis, pero tavis lo besa más rico</h1>
+			</LayoutStore>
+		</ChakraProvider>
 	)
 }
 
