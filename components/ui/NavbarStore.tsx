@@ -10,7 +10,7 @@ import {
 	Button,
 } from "@chakra-ui/react"
 import { ChevronDownIcon } from "@chakra-ui/icons"
-import { BiCart } from "react-icons/bi";
+import { BiCart, BiHeart } from "react-icons/bi";
 
 const NavbarStore = () => {
 	return (
@@ -25,6 +25,7 @@ const NavbarStore = () => {
 				<MenuItem>Delete</MenuItem>
 				<MenuItem>Attend a Workshop</MenuItem>
 				<MenuItem><BiCart/></MenuItem>
+				<MenuItem><BiHeart/></MenuItem>
 			</MenuList>
 		</Menu>
 	)
