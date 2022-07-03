@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { NavbarStore } from "./"
+import { NavbarStore, NavActionStore } from "./"
 
 
 const HeaderStore = () => {
@@ -11,6 +11,7 @@ const HeaderStore = () => {
 				src="/img/header/SHENDY-VENDY-1.png"
 				alt="Shendy Vendy"/>
 			<NavbarStore />
+			<NavActionStore />
 		</header>
 	)
 }
