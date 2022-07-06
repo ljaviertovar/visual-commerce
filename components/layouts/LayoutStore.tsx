@@ -1,7 +1,7 @@
 import { FC } from "react"
 
 import Head from "next/head"
-import { HeaderStore } from "../ui"
+import { HeaderStore, FooterStore } from "../ui"
 
 interface Props {
 	title?: string
@@ -24,6 +24,7 @@ const LayoutStore: FC<Props> = ({ title, children }) => {
 
 			<HeaderStore />
 			<main>{children}</main>
+			<FooterStore />
 		</>
 	)
 }
