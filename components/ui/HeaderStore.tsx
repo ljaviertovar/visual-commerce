@@ -1,11 +1,12 @@
 import Image from "next/image"
-import { NavbarStore } from "./"
+import { NavbarStore, NavActionStore } from "./"
 
 const HeaderStore = () => {
 	return (
     <header>
  
 			<NavbarStore />
+			<NavActionStore />
 		</header>
 	)
 }
