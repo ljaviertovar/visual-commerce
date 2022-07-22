@@ -5,4 +5,5 @@ import FooterStore from "./FooterStore"
 import QuickLinksFooterStore from "./QuickLinksFooterStore"
 import PlusInFooterStore from "./PlusInFooterStore"
 import SocialNetworksFooter from "./SocialNetworksFooter"
-export { HeaderStore, NavbarStore, NavActionStore, FooterStore, QuickLinksFooterStore, PlusInFooterStore, SocialNetworksFooter }
+import ContactFooter from "./ContactFooter"
+export { HeaderStore, NavbarStore, NavActionStore, FooterStore, QuickLinksFooterStore, PlusInFooterStore, SocialNetworksFooter, ContactFooter }
