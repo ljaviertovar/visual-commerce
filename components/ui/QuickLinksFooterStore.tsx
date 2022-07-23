@@ -8,6 +8,7 @@ import {
 	List,
 	ListItem,
 	ListIcon,
+    Link,
 	} from '@chakra-ui/react'
 
 const QuickLinksFooterStore = () => {
@@ -25,12 +26,16 @@ const QuickLinksFooterStore = () => {
                 <AccordionPanel pb={4}>
                 <List spacing={3}>
                     <ListItem>
-                        <ListIcon as={ BiRadioCircleMarked } color='green.500' />
-                        Hombre
+                        <Link href='/'>
+                            <ListIcon as={ BiRadioCircleMarked } color='green.500' />
+                            Hombre
+                        </Link>
                     </ListItem>
                     <ListItem>
+                    <Link href='/'>
                         <ListIcon as={ BiRadioCircleMarked } color='green.500' />
-                        Mujer
+                            Mujer
+                        </Link>
                     </ListItem>
                 </List>
                 </AccordionPanel>
@@ -46,16 +51,22 @@ const QuickLinksFooterStore = () => {
                 <AccordionPanel pb={4}>
                 <List spacing={3}>
                     <ListItem>
-                        <ListIcon as={ BiRadioCircleMarked } color='green.500' />
-                        Conjunto deportivo
+                        <Link href='/'>
+                            <ListIcon as={ BiRadioCircleMarked } color='green.500' />
+                            Conjunto deportivo
+                        </Link>
                     </ListItem>
                     <ListItem>
-                        <ListIcon as={ BiRadioCircleMarked } color='green.500' />
-                        Leggins deportivos con bolsa
+                        <Link href='/'>
+                            <ListIcon as={ BiRadioCircleMarked } color='green.500' />
+                            Leggins deportivos con bolsa
+                        </Link>
                     </ListItem>
                     <ListItem>
-                        <ListIcon as={ BiRadioCircleMarked } color='green.500' />
-                        Sudadera con capucha
+                        <Link href='/'>
+                            <ListIcon as={ BiRadioCircleMarked } color='green.500' />
+                            Sudadera con capucha
+                        </Link>
                     </ListItem>
                 </List>
                 </AccordionPanel>
@@ -71,8 +82,10 @@ const QuickLinksFooterStore = () => {
                 <AccordionPanel pb={4}>
                 <List spacing={3}>
                     <ListItem>
-                        <ListIcon as={ BiRadioCircleMarked } color='green.500' />
-                        Test 1
+                        <Link href='/' isExternal>
+                            <ListIcon as={ BiRadioCircleMarked } color='green.500' />
+                            Test
+                        </Link>
                     </ListItem>
                 </List>
                 </AccordionPanel>
