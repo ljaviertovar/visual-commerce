@@ -1,4 +1,4 @@
-import { IconButton } from '@chakra-ui/react'
+import { IconButton } from "@chakra-ui/react"
 import {
 	Menu,
 	MenuButton,
@@ -11,18 +11,13 @@ import {
 	Button,
 } from "@chakra-ui/react"
 
-import { BiCart, BiHeart } from "react-icons/bi";
+import { BiCart, BiHeart } from "react-icons/bi"
 
-const NavbarStore = () => {
+const NavbarShop = () => {
 	return (
 		<Menu>
-			<IconButton
-                colorScheme='teal'
-                aria-label='Call Segun'
-                size='lg'
-                icon={<BiHeart />}
-/>
+			<IconButton colorScheme='teal' aria-label='Call Segun' size='lg' icon={<BiHeart />} />
 		</Menu>
 	)
 }
-export default NavbarStore
+export default NavbarShop
