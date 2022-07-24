@@ -1,7 +1,7 @@
 import { FC } from "react"
 
 import Head from "next/head"
-import { HeaderShop, FooterStore } from "../ui"
+import { HeaderShop, FooterShop } from "../ui"
 
 interface Props {
 	children: React.ReactNode
@@ -27,7 +27,7 @@ const ShopLayout: FC<Props> = ({ children, title, pageDescription, imageFullUrl 
 
 			<main style={{ margin: "80px auto", maxWidth: "1440px", padding: "0px 30px" }}>{children}</main>
 
-			<FooterStore />
+			<FooterShop />
 		</>
 	)
 }

@@ -1,12 +1,12 @@
-import { NavbarShop, NavActionStore } from "."
-import NavbarSearchShop from "./NavbarSearchShop"
+import { useMediaQuery } from '@chakra-ui/react'
+import { NavBarMobile, NavBarDesktop } from "."
+
 
 const HeaderShop = () => {
+	const [isDesktop] = useMediaQuery('(min-width: 769px)')
 	return (
 		<header>
-			<NavbarSearchShop />
-			<NavbarShop />
-			<NavActionStore />
+			{isDesktop ? <NavBarDesktop /> : <NavBarMobile />}
 		</header>
 	)
 }
