@@ -65,7 +65,7 @@ export default function NavbarSearchShop() {
 						fontWeight={600}
 						color={"white"}
 						bg={"pink.400"}
-						href={"#"}
+						// href={"#"}
 						_hover={{
 							bg: "pink.300",
 						}}
