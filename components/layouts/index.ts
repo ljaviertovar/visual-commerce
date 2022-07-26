@@ -1,2 +1,2 @@
-import LayoutStore from "./LayoutStore"
-export { LayoutStore }
+import ShopLayout from "./ShopLayout"
+export { ShopLayout }

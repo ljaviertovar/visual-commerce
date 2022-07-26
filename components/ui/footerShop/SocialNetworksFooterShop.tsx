@@ -6,7 +6,7 @@ import {
     Link
 	} from '@chakra-ui/react'
 
-const SocialNetworksFooter = () => {
+const SocialNetworksFooterShop = () => {
 	return (
     <Wrap px={3}>
         <Link href='#' isExternal>
@@ -48,4 +48,4 @@ const SocialNetworksFooter = () => {
 	)
 }
 
-export default SocialNetworksFooter
+export default SocialNetworksFooterShop

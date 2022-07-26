@@ -11,7 +11,7 @@ import {
     Link,
 	} from '@chakra-ui/react'
 
-const QuickLinksFooterStore = () => {
+const QuickLinksFooterShop = () => {
 	return (
 		<>
         <Accordion allowToggle>
@@ -96,4 +96,4 @@ const QuickLinksFooterStore = () => {
 	)
 }
 
-export default QuickLinksFooterStore
+export default QuickLinksFooterShop

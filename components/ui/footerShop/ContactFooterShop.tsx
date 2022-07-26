@@ -8,7 +8,7 @@ import {
     Text
 	} from '@chakra-ui/react'
 
-const ContactFooter = () => {
+const ContactFooterShop = () => {
 	return (
     <Container m={3} p={0}>
         <Heading as='h3' size='md'>
@@ -38,4 +38,4 @@ const ContactFooter = () => {
 	)
 }
 
-export default ContactFooter
+export default ContactFooterShop
