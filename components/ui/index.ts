@@ -9,16 +9,18 @@ import ContactFooterShop from "./footerShop/ContactFooterShop"
 import QuickLinksFooterShop from "./footerShop/QuickLinksFooterShop"
 import PlusInFooterShop from "./footerShop/PlusInFooterShop"
 import SocialNetworksFooterShop from "./footerShop/SocialNetworksFooterShop"
+import HeroSlider from "./HeroSlider"
 export {
 	HeaderShop,
 	NavbarShop,
-    NavbarSearchShop,
-    NavBarMobile,
-    NavBarDesktop,
+	NavbarSearchShop,
+	NavBarMobile,
+	NavBarDesktop,
 	FooterShop,
-    ContactFooterShop,  
+	ContactFooterShop,
 	QuickLinksFooterShop,
 	PlusInFooterShop,
 	SocialNetworksFooterShop,
-    SideMenuStore
+	SideMenuStore,
+	HeroSlider,
 }

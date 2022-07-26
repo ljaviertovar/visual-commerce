@@ -1,8 +1,9 @@
+import { Box } from "@chakra-ui/react"
 
 const NavBarDesktop = () => {
 	return (
 		<>
-			Hola mundo
+			<Box>Menu desktop</Box>
 		</>
 	)
 }
