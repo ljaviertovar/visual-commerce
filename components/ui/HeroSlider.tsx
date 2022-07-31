@@ -10,14 +10,30 @@ import Slider from "react-slick"
 // Settings for the slider
 const settings = {
 	dots: true,
-	arrows: false,
-	fade: true,
+	arrows: true,
+	fade: false,
 	infinite: true,
 	autoplay: true,
 	speed: 500,
 	autoplaySpeed: 5000,
+	centerMode: true,
 	slidesToShow: 1,
 	slidesToScroll: 1,
+	// beforeChange: (current, next) => {
+	// 	// event.preventDefault();
+	// 	console.log("BEFORE CHANGE: ", current)
+	// 	const slides = document.getElementsByClassName("SliderItem")
+	// 	console.log(slides)
+	// 	console.log(slides[0].css({ background: "red" }))
+	// 	slides[current].classList.add("animate-out")
+	// },
+	// afterChange: current => {
+	// 	console.log("AFTER CHANGE: ", current)
+	// 	const prevSlide = document.getElementsByClassName("animate-out")
+	// 	prevSlide[0].classList.remove("animate-out")
+	// 	const slides = document.getElementsByClassName("SliderItem")
+	// 	slides[current].classList.add("animate-in")
+	// },
 }
 
 const SliderHero = () => {
@@ -88,6 +104,7 @@ const SliderHero = () => {
 			>
 				<BiRightArrowAlt size='40px' />
 			</IconButton>
+
 			{/* Slider */}
 			<Box as='section'>
 				<Slider {...settings} ref={slider => setSlider(slider)}>
@@ -100,6 +117,7 @@ const SliderHero = () => {
 							backgroundRepeat='no-repeat'
 							backgroundSize='cover'
 							backgroundImage={`url(${image})`}
+							className='SliderItem animate-in'
 						>
 							{/* This is the block you need to change, to customize the caption */}
 							<Container height='600px' position='relative' maxW='full' centerContent>

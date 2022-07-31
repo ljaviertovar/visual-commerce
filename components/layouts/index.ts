@@ -1,2 +1,3 @@
 import ShopLayout from "./ShopLayout"
-export { ShopLayout }
+import ShopHomeLayout from "./ShopHomeLayout"
+export { ShopLayout, ShopHomeLayout }
