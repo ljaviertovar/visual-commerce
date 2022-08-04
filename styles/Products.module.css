@@ -1,0 +1,40 @@
+/* CATEGORIES */
+.categoryCard:hover {
+  cursor: pointer;
+}
+
+.categoryCard:hover .categoryCardBtn {
+  transition: opacity .8s, height .8s linear;
+  opacity: 1;
+  height: auto;
+}
+
+.categoryCardBtn {
+  opacity: 0;
+  height: 0;
+
+}
+
+/* CATEGORIES */
+
+/* PRODUCTS */
+.productDetails {
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.productCard:hover .productDetails {
+  margin-top: -70px;
+}
+
+.buttonCard {
+  display: none;
+}
+
+.productCard:hover .buttonCard {
+  display: block;
+}
+
+/* PRODUCTS */

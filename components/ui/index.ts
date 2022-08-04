@@ -10,6 +10,10 @@ import QuickLinksFooterShop from "./footerShop/QuickLinksFooterShop"
 import PlusInFooterShop from "./footerShop/PlusInFooterShop"
 import SocialNetworksFooterShop from "./footerShop/SocialNetworksFooterShop"
 import HeroSlider from "./HeroSlider"
+import TitleSection from "./TitleSection"
+import ButtonGradient from "./ButtonGradient"
+import LinkButton from "./LinkButton"
+
 export {
 	HeaderShop,
 	NavbarShop,
@@ -23,4 +27,7 @@ export {
 	SocialNetworksFooterShop,
 	SideMenuStore,
 	HeroSlider,
+	TitleSection,
+	ButtonGradient,
+	LinkButton,
 }
