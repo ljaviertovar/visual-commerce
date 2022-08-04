@@ -11,6 +11,7 @@ import PlusInFooterShop from "./footerShop/PlusInFooterShop"
 import SocialNetworksFooterShop from "./footerShop/SocialNetworksFooterShop"
 import HeroSlider from "./HeroSlider"
 import TitleSection from "./TitleSection"
+import ButtonGradient from "./ButtonGradient"
 
 export {
 	HeaderShop,
@@ -26,4 +27,5 @@ export {
 	SideMenuStore,
 	HeroSlider,
 	TitleSection,
+	ButtonGradient,
 }

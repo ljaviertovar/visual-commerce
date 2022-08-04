@@ -1,94 +1,102 @@
-import { Badge, Box, Image, Text, Center, Flex } from "@chakra-ui/react"
+import { FC, useState } from "react"
+
+import NextLink from "next/link"
+
+import { Box, Image, Text, Flex, Button, Icon, Link } from "@chakra-ui/react"
+import { BsSuitHeart, BsSuitHeartFill } from "react-icons/bs"
+
+import { ProductDetails, ProductBreadcrump, ProductPrice, ProductTags, ProductTagsPromotions } from "./"
 
 import styles from "../../styles/Products.module.css"
 
+import tn1 from "../../public/img/BLANCO-300x300.png"
+import tn2 from "../../public/img/BEIGE-300x300.png"
+
 const property = {
 	id: 1,
-	imagesUrl: [
-		"https://shendyvendy.com/wp-content/uploads/2022/05/BEIGE-300x300.jpg",
-		"https://shendyvendy.com/wp-content/uploads/2022/05/BLANCO-300x300.jpg",
-	],
+	imagesUrl: [tn1.src, tn2.src],
 	imageAlt: "Tennis Cardiff",
 	category: "hombre",
 	subcategory: "tennis de hombre",
+	currentCategory: "tennis de hombre",
+	categoryTree: ["hombre", "tennis de hombre"],
 	title: "Cardiff",
 	formattedPrice: "$350.00",
 	currency: "MXN",
 	reviewCount: 34,
 	rating: 4,
 	tags: ["Top"],
+	promotionTags: ["50% descuento"],
 	sizes: ["22", "24", "26"],
-	colors: ["beage"],
+	colors: ["gray"],
 }
 
-const ProductCard = ({ id }) => {
-	const changeImage = imageId => {
+interface Props {
+	id: string
+}
+
+const ProductCard: FC<Props> = ({ id }) => {
+	const [iconFavHovered, setIconFavHovered] = useState(false)
+
+	const changeImage = (imageId: number) => {
 		const eImage = document.getElementById(`${property.title}${id}`)
 		eImage?.setAttribute("src", property.imagesUrl[imageId])
 	}
 
 	return (
 		<Box
-			borderWidth='1px'
-			borderRadius='md'
+			border='1px solid white'
 			overflow='hidden'
 			pos='relative'
-			border={0}
 			maxW='300px'
 			bg='white'
 			m='auto'
 			mb={4}
-			className={`shadow ${styles.productCard}`}
-			h='400px'
+			className={`${styles.productCard}`}
+			h='416px'
+			_hover={{ cursor: "pointer", border: "1px solid black" }}
 			onMouseEnter={() => changeImage(0)}
 			onMouseLeave={() => changeImage(1)}
+			bgGradient='linear-gradient(0deg, rgba(255,255,255,0) 20%, rgba(0,0,0,0.2) 100%)'
 		>
-			<Badge borderRadius='full' px='2' bg='secondary' color='white' pos='absolute' right={5}>
-				{property.tags[0]}
-			</Badge>
+			<Flex pos='absolute' justifyContent={"space-between"} w='full' zIndex='10' p={4}>
+				<ProductTagsPromotions promotionTags={property.promotionTags} />
+				<Icon
+					as={iconFavHovered ? BsSuitHeartFill : BsSuitHeart}
+					onMouseEnter={() => setIconFavHovered(true)}
+					onMouseLeave={() => setIconFavHovered(false)}
+					_hover={{ cursor: "pointer" }}
+				/>
+			</Flex>
 
-			<Center m={4} maxH='270px'>
+			<Box mt={8} mb={4} mx={4} pos='relative'>
 				<Image src={property.imagesUrl[0]} alt={property.imageAlt} objectFit='cover' id={`${property.title}${id}`} />
-			</Center>
+			</Box>
 
-			<Box className={styles.productDetails} backdropFilter='auto' backdropBlur='8px' p={4}>
-				<Box display='flex' alignItems='baseline'>
-					<Box color='gray.500' letterSpacing='wide' fontSize='xs' textTransform='uppercase' mr='2'>
-						{`${property.category} / ${property.subcategory}`}
-					</Box>
+			<Box className={styles.productDetails} backdropFilter='auto' backdropBlur='0' bg='whiteAlpha.600' p={4}>
+				<ProductBreadcrump categories={property.categoryTree} currentCategory='currentCategory' size='xs' />
+
+				<Flex gap='4' alignItems={"center"}>
+					<Text fontWeight='black' as='h3' size='lg' noOfLines={1}>
+						{property.title}
+					</Text>
+					<ProductTags tags={property.tags} />
+				</Flex>
+
+				<ProductPrice price={property.formattedPrice} currency={property.currency} />
+
+				<Box mt={4} fontSize='xs'>
+					<ProductDetails sizes={property.sizes} colors={property.colors} />
 				</Box>
 
-				<Text fontWeight='black' as='h3' size='lg' noOfLines={1}>
-					{property.title}
-				</Text>
-
-				<Text as='span' fontSize='xl' fontWeight='black' color='dark'>
-					{property.formattedPrice}
-					<Box fontSize='xs' fontWeight='black' color='dark' as='span'>
-						{" "}
-						{property.currency}
-					</Box>
-				</Text>
-
-				<Box className={styles.productMoreDetails} mt={4}>
-					<Flex fontSize='sm' fontWeight='semibold' mb={1}>
-						Tallas
-						<Flex ml={4} fontWeight='normal' gap={1}>
-							{property.sizes?.map(size => (
-								<Box key={size} border='1px' borderColor='gray.300' px={1}>
-									{size}
-								</Box>
-							))}
-						</Flex>
-					</Flex>
-					<Flex fontSize='sm' fontWeight='semibold' mb={1}>
-						Colores{" "}
-						<Box ml={4} fontWeight='normal'>
-							{property.colors?.map(color => (
-								<Box key={color} bg={color} w={4} h={4} borderRadius='full'></Box>
-							))}
-						</Box>
-					</Flex>
+				<Box pos='absolute' bottom={0} right={0} className={styles.buttonCard} p={4}>
+					<NextLink href='/' passHref>
+						<Link _hover={{ textDecor: "none" }}>
+							<Button bg={"white"} size='sm'>
+								Ver más
+							</Button>
+						</Link>
+					</NextLink>
 				</Box>
 			</Box>
 		</Box>

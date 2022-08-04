@@ -18,11 +18,6 @@
 /* CATEGORIES */
 
 /* PRODUCTS */
-
-.productCard {
-  cursor: pointer;
-}
-
 .productDetails {
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -30,17 +25,16 @@
   transition: all 500ms ease-in-out;
 }
 
-.productMoreDetails {
-  display: none;
-}
-
 .productCard:hover .productDetails {
   margin-top: -70px;
 }
 
-.productCard:hover .productMoreDetails {
-  display: block;
+.buttonCard {
+  display: none;
 }
 
+.productCard:hover .buttonCard {
+  display: block;
+}
 
 /* PRODUCTS */
