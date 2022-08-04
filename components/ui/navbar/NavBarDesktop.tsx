@@ -3,7 +3,9 @@ import { Box } from "@chakra-ui/react"
 const NavBarDesktop = () => {
 	return (
 		<>
-			<Box>Menu desktop</Box>
+			<Box bg='blackAlpha.800' color='baseLight'>
+				Menu desktop
+			</Box>
 		</>
 	)
 }

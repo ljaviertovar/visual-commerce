@@ -41,6 +41,7 @@ export const styles = {
 		secondary: "#de6161",
 		emphasis: "#EBBA26",
 		base: "RGBA(0, 0, 0, 0.92)",
+		baseLight: "#fff",
 	},
 	fonts: {
 		heading: `'Bebas Neue', sans-serif`,
