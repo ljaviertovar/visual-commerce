@@ -1,5 +1,5 @@
 import CategoryCard from "./CategoryCard"
-import MainCategories from "./MainCategories"
+import FeaturedCategories from "./FeaturedCategories"
 import ProductCard from "./ProductCard"
 import ProductSlider from "./ProductSlider"
 import ProductDetails from "./ProductDetails"
@@ -10,7 +10,7 @@ import ProductTagsPromotions from "./ProductTagsPromotions"
 
 export {
 	CategoryCard,
-	MainCategories,
+	FeaturedCategories,
 	ProductCard,
 	ProductSlider,
 	ProductDetails,

@@ -1,8 +1,6 @@
 import { FC, useState } from "react"
 
-import NextLink from "next/link"
-
-import { Box, Image, Text, Flex, Button, Icon, Link } from "@chakra-ui/react"
+import { Box, Image, Text, Flex, Icon } from "@chakra-ui/react"
 import { BsSuitHeart, BsSuitHeartFill } from "react-icons/bs"
 
 import { ProductDetails, ProductBreadcrump, ProductPrice, ProductTags, ProductTagsPromotions } from "./"
@@ -11,8 +9,9 @@ import styles from "../../styles/Products.module.css"
 
 import tn1 from "../../public/img/BLANCO-300x300.png"
 import tn2 from "../../public/img/BEIGE-300x300.png"
+import { LinkButton } from "../ui"
 
-const property = {
+const data = {
 	id: 1,
 	imagesUrl: [tn1.src, tn2.src],
 	imageAlt: "Tennis Cardiff",
@@ -39,8 +38,8 @@ const ProductCard: FC<Props> = ({ id }) => {
 	const [iconFavHovered, setIconFavHovered] = useState(false)
 
 	const changeImage = (imageId: number) => {
-		const eImage = document.getElementById(`${property.title}${id}`)
-		eImage?.setAttribute("src", property.imagesUrl[imageId])
+		const eImage = document.getElementById(`${data.title}${id}`)
+		eImage?.setAttribute("src", data.imagesUrl[imageId])
 	}
 
 	return (
@@ -60,7 +59,7 @@ const ProductCard: FC<Props> = ({ id }) => {
 			bgGradient='linear-gradient(0deg, rgba(255,255,255,0) 20%, rgba(0,0,0,0.2) 100%)'
 		>
 			<Flex pos='absolute' justifyContent={"space-between"} w='full' zIndex='10' p={4}>
-				<ProductTagsPromotions promotionTags={property.promotionTags} />
+				<ProductTagsPromotions promotionTags={data.promotionTags} />
 				<Icon
 					as={iconFavHovered ? BsSuitHeartFill : BsSuitHeart}
 					onMouseEnter={() => setIconFavHovered(true)}
@@ -70,33 +69,27 @@ const ProductCard: FC<Props> = ({ id }) => {
 			</Flex>
 
 			<Box mt={8} mb={4} mx={4} pos='relative'>
-				<Image src={property.imagesUrl[0]} alt={property.imageAlt} objectFit='cover' id={`${property.title}${id}`} />
+				<Image src={data.imagesUrl[0]} alt={data.imageAlt} objectFit='cover' id={`${data.title}${id}`} />
 			</Box>
 
 			<Box className={styles.productDetails} backdropFilter='auto' backdropBlur='0' bg='whiteAlpha.600' p={4}>
-				<ProductBreadcrump categories={property.categoryTree} currentCategory='currentCategory' size='xs' />
+				<ProductBreadcrump categories={data.categoryTree} currentCategory='currentCategory' size='xs' />
 
 				<Flex gap='4' alignItems={"center"}>
 					<Text fontWeight='black' as='h3' size='lg' noOfLines={1}>
-						{property.title}
+						{data.title}
 					</Text>
-					<ProductTags tags={property.tags} />
+					<ProductTags tags={data.tags} />
 				</Flex>
 
-				<ProductPrice price={property.formattedPrice} currency={property.currency} />
+				<ProductPrice price={data.formattedPrice} currency={data.currency} />
 
 				<Box mt={4} fontSize='xs'>
-					<ProductDetails sizes={property.sizes} colors={property.colors} />
+					<ProductDetails sizes={data.sizes} colors={data.colors} />
 				</Box>
 
 				<Box pos='absolute' bottom={0} right={0} className={styles.buttonCard} p={4}>
-					<NextLink href='/' passHref>
-						<Link _hover={{ textDecor: "none" }}>
-							<Button bg={"white"} size='sm'>
-								Ver más
-							</Button>
-						</Link>
-					</NextLink>
+					<LinkButton text='Ver más' link='/' size='sm' />
 				</Box>
 			</Box>
 		</Box>

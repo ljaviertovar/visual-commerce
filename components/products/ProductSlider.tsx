@@ -8,9 +8,10 @@ import "swiper/css/pagination"
 import "swiper/css/navigation"
 import "swiper/css/scrollbar"
 import { useEffect, useRef, useState } from "react"
-import { Box, IconButton } from "@chakra-ui/react"
+import { Box, IconButton, Link } from "@chakra-ui/react"
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons"
 import { TitleSection } from "../ui"
+import NextLink from "next/link"
 
 const ProductSlider = () => {
 	const [swiperInstance, setSwiperInstance] = useState<any>(null)
@@ -28,7 +29,7 @@ const ProductSlider = () => {
 
 	return (
 		<>
-			<TitleSection title='Destacados' />
+			<TitleSection title='Destacados' align='center' />
 			<Box pos='relative'>
 				<IconButton
 					className='swiper-button'
@@ -80,7 +81,11 @@ const ProductSlider = () => {
 					{[...Array(8)].map((_, index) => {
 						return (
 							<SwiperSlide key={index}>
-								<ProductCard id={index} />
+								<NextLink href='/' passHref>
+									<Link _hover={{ textDecor: "none" }}>
+										<ProductCard id={index} />
+									</Link>
+								</NextLink>
 							</SwiperSlide>
 						)
 					})}
