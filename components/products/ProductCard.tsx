@@ -35,12 +35,8 @@ interface Props {
 }
 
 const ProductCard: FC<Props> = ({ id }) => {
+	const [isCardHovered, setIsCardHovered] = useState(false)
 	const [iconFavHovered, setIconFavHovered] = useState(false)
-
-	const changeImage = (imageId: number) => {
-		const eImage = document.getElementById(`${data.title}${id}`)
-		eImage?.setAttribute("src", data.imagesUrl[imageId])
-	}
 
 	return (
 		<Box
@@ -54,8 +50,8 @@ const ProductCard: FC<Props> = ({ id }) => {
 			className={`${styles.productCard}`}
 			h='416px'
 			_hover={{ cursor: "pointer", border: "1px solid black" }}
-			onMouseEnter={() => changeImage(0)}
-			onMouseLeave={() => changeImage(1)}
+			onMouseEnter={() => setIsCardHovered(true)}
+			onMouseLeave={() => setIsCardHovered(false)}
 			bgGradient='linear-gradient(0deg, rgba(255,255,255,0) 20%, rgba(0,0,0,0.2) 100%)'
 		>
 			<Flex pos='absolute' justifyContent={"space-between"} w='full' zIndex='10' p={4}>
@@ -69,7 +65,12 @@ const ProductCard: FC<Props> = ({ id }) => {
 			</Flex>
 
 			<Box mt={8} mb={4} mx={4} pos='relative'>
-				<Image src={data.imagesUrl[0]} alt={data.imageAlt} objectFit='cover' id={`${data.title}${id}`} />
+				<Image
+					src={isCardHovered ? data.imagesUrl[1] : data.imagesUrl[0]}
+					alt={data.imageAlt}
+					objectFit='cover'
+					id={`${data.title}${id}`}
+				/>
 			</Box>
 
 			<Box className={styles.productDetails} backdropFilter='auto' backdropBlur='0' bg='whiteAlpha.600' p={4}>
