@@ -1,8 +1,7 @@
 import { FC } from "react"
-import NextLink from "next/link"
 import { motion } from "framer-motion"
 
-import { Box, Button, Flex, Heading, Text, Link } from "@chakra-ui/react"
+import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react"
 
 import { Category } from "../../ts/interfaces/product.interface"
 

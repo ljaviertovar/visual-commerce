@@ -1,5 +1,5 @@
-import { Tag } from "@chakra-ui/react"
 import { FC } from "react"
+import { Tag } from "@chakra-ui/react"
 
 interface Props {
 	tags: string[]

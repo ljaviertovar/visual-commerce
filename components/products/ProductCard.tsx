@@ -1,6 +1,6 @@
 import { FC, useState } from "react"
 
-import { Box, Image, Text, Flex, Icon } from "@chakra-ui/react"
+import { Box, Image, Text, Flex, Icon, Button } from "@chakra-ui/react"
 import { BsSuitHeart, BsSuitHeartFill } from "react-icons/bs"
 
 import { ProductDetails, ProductBreadcrump, ProductPrice, ProductTags, ProductTagsPromotions } from "./"
@@ -9,7 +9,6 @@ import styles from "../../styles/Products.module.css"
 
 import tn1 from "../../public/img/BLANCO-300x300.png"
 import tn2 from "../../public/img/BEIGE-300x300.png"
-import { LinkButton } from "../ui"
 
 const data = {
 	id: 1,
@@ -31,7 +30,7 @@ const data = {
 }
 
 interface Props {
-	id: string
+	id: number
 }
 
 const ProductCard: FC<Props> = ({ id }) => {
@@ -90,7 +89,9 @@ const ProductCard: FC<Props> = ({ id }) => {
 				</Box>
 
 				<Box pos='absolute' bottom={0} right={0} className={styles.buttonCard} p={4}>
-					<LinkButton text='Ver más' link='/' size='sm' />
+					<Button bg={"white"} size='sm'>
+						Ver más
+					</Button>
 				</Box>
 			</Box>
 		</Box>

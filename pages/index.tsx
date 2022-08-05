@@ -7,7 +7,7 @@ const Home: NextPage = () => {
 	return (
 		<ShopHomeLayout title='Shendy Vendy' pageDescription='Find the best products here.'>
 			<Box as='section' mt={12} mb={8}>
-				<FeaturedCategories />
+				<FeaturedCategories categories={[]} />
 			</Box>
 			<Box as='section' mt={12} mb={8}>
 				<ProductSlider />

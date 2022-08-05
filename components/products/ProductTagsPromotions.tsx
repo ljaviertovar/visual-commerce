@@ -1,5 +1,5 @@
-import { Badge, Flex } from "@chakra-ui/react"
 import { FC } from "react"
+import { Badge, Flex } from "@chakra-ui/react"
 
 interface Props {
 	promotionTags: string[]

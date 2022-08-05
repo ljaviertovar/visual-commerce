@@ -1,9 +1,11 @@
+import { FC } from "react"
+import NextLink from "next/link"
+
 import { Box, Grid, GridItem, Link } from "@chakra-ui/react"
+
 import CategoryCard from "./CategoryCard"
 
 import { Category } from "../../ts/interfaces/product.interface"
-import { FC } from "react"
-import NextLink from "next/link"
 
 const data = {
 	categories: [
@@ -52,7 +54,7 @@ const FeaturedCategories: FC<Props> = () => {
 					{data.categories.map(category => (
 						<GridItem key={category.id} w='100%' h='400px'>
 							<NextLink href={category.url} passHref>
-								<Link _hover={{ textDecor: "none" }}>
+								<Link _hover={{ textDecoration: "none" }}>
 									<CategoryCard category={category} />
 								</Link>
 							</NextLink>

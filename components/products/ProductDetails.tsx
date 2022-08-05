@@ -1,5 +1,5 @@
-import { Box, Flex } from "@chakra-ui/react"
 import { FC } from "react"
+import { Box, Flex } from "@chakra-ui/react"
 
 interface Props {
 	sizes?: string[]
