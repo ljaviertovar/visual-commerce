@@ -72,7 +72,13 @@ const ProductCard: FC<Props> = ({ id }) => {
 				/>
 			</Box>
 
-			<Box className={styles.productDetails} backdropFilter='auto' backdropBlur='0' bg='whiteAlpha.600' p={4}>
+			<Box
+				className={styles.productDetails}
+				backdropFilter='auto'
+				backdropBlur='0'
+				bgGradient='linear-gradient(0deg, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%);'
+				p={4}
+			>
 				<ProductBreadcrump categories={data.categoryTree} currentCategory='currentCategory' size='xs' />
 
 				<Flex gap='4' alignItems={"center"}>

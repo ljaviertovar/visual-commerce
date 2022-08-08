@@ -10,7 +10,7 @@ export const styles = {
 				overflowX: "hidden",
 				color: "RGBA(0, 0, 0, 0.92)",
 			},
-			main: {
+			".shopSection": {
 				width: "calc(100% - 100px)",
 				// maxWidth: "1600px",
 				margin: "auto",
@@ -37,9 +37,9 @@ export const styles = {
 		},
 	},
 	colors: {
-		primary: "#2657eb",
-		secondary: "#de6161",
-		emphasis: "#EBBA26",
+		primary: "#2b32b2",
+		secondary: "#1488cc",
+		emphasis: "#88CC14",
 		base: "RGBA(0, 0, 0, 0.92)",
 		baseLight: "#fff",
 	},

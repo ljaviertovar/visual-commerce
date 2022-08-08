@@ -30,7 +30,7 @@ const ProductSlider = () => {
 
 	return (
 		<>
-			<TitleSection title='Destacados' align='center' />
+			<TitleSection title='Los más vendidos' align='center' />
 			<Box pos='relative'>
 				<IconButton
 					className='swiper-button'
