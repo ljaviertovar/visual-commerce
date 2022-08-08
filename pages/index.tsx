@@ -18,7 +18,7 @@ const rBanner1 = {
 	pretitle: "Hot promotions here",
 	title: "Visual Commerce. The best!",
 	subtitle: "Create yout own fashion",
-	textButton: "Compra ahora",
+	textButton: "Comprar ahora",
 	linkButton: "/",
 }
 
