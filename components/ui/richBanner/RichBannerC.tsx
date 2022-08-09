@@ -4,8 +4,6 @@ import { FC } from "react"
 import LinkButton from "../LinkButton"
 
 interface Props {
-	fullImage?: boolean
-	imageRight?: boolean
 	banner: string
 	center?: boolean
 	textCenter?: boolean
@@ -13,20 +11,19 @@ interface Props {
 	pretitle?: string
 	title: string
 	subtitle?: string
+	sizeButton: "sm" | "md" | "lg" | "xs"
 	textButton?: string
 	linkButton?: string
 }
 
 const RichBanner: FC<Props> = ({
-	fullImage,
-	center,
-	imageRight,
 	banner,
 	textCenter,
 	textRight,
 	pretitle,
 	title,
 	subtitle,
+	sizeButton,
 	textButton,
 	linkButton,
 }) => {
@@ -34,7 +31,6 @@ const RichBanner: FC<Props> = ({
 		<Box
 			w='full'
 			h='100%'
-			// maxH='500px'
 			position='relative'
 			backgroundPosition='center'
 			backgroundRepeat='no-repeat'
@@ -60,7 +56,7 @@ const RichBanner: FC<Props> = ({
 				</Box>
 				{textButton && linkButton && (
 					<Box w='full'>
-						<LinkButton text={textButton} size={"md"} link={linkButton} />
+						<LinkButton text={textButton} size={sizeButton} link={linkButton} />
 					</Box>
 				)}
 			</VStack>

@@ -55,7 +55,7 @@ const SliderBrands = () => {
 			>
 				{brands.map(({ id, alt, image }) => (
 					<SwiperSlide key={id}>
-						<Box boxSize='80px' margin='auto'>
+						<Box boxSize='60px' margin='auto' display='flex' alignItems='center'>
 							<Image src={image.src} alt={alt} />
 						</Box>
 					</SwiperSlide>

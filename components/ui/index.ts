@@ -15,8 +15,8 @@ import ButtonGradient from "./ButtonGradient"
 import LinkButton from "./LinkButton"
 import HeadBandShop from "./HeadBandShop"
 import SliderBrands from "./SliderBrands"
-import RichBanner from "./RichBanner"
-import RichBannerCenter from "./richBanner/richBannerCenter"
+import RichBannerLR from "./richBanner/RichBannerLR"
+import RichBannerC from "./richBanner/RichBannerC"
 
 export {
 	HeaderShop,
@@ -36,6 +36,6 @@ export {
 	LinkButton,
 	HeadBandShop,
 	SliderBrands,
-	RichBanner,
-	RichBannerCenter,
+	RichBannerLR,
+	RichBannerC,
 }

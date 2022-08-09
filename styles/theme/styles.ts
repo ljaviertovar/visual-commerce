@@ -39,7 +39,7 @@ export const styles = {
 	colors: {
 		primary: "#2b32b2",
 		secondary: "#1488cc",
-		emphasis: "#88CC14",
+		emphasis: "#5ACC14",
 		base: "RGBA(0, 0, 0, 0.92)",
 		baseLight: "#fff",
 	},
