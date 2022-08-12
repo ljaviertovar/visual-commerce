@@ -33,6 +33,10 @@ export const styles = {
 				width: "0.8rem",
 				height: "0.8rem",
 			},
+			".borderDiv": {
+				borderTop: "1px solid RGBA(0, 0, 0, 0.92)",
+				borderBottom: "1px solid RGBA(0, 0, 0, 0.92)",
+			},
 		},
 	},
 	colors: {

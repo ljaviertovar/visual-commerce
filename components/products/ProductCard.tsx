@@ -39,8 +39,8 @@ const ProductCard: FC<Props> = ({ id }) => {
 
 	return (
 		<Box
-			border='1px solid white'
-			// border='1px solid rgba(0,0,0,0.9)'
+			// border='1px solid white'
+			border='1px solid rgba(0,0,0,0.9)'
 			overflow='hidden'
 			pos='relative'
 			maxW='300px'

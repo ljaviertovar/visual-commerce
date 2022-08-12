@@ -13,7 +13,7 @@ interface Props {
 
 const HeadBandShop: FC<Props> = ({ title, textLink, titleSize, link, textBtn }) => {
 	return (
-		<Center w='100%' bg='emphasis'>
+		<Center w='100%' bg='emphasis' className='borderDiv'>
 			<Flex padding='4' maxW='xl' textTransform='uppercase' fontSize='sm' alignItems='center'>
 				<Text fontSize={titleSize} fontWeight={`${textBtn ? "bold" : "normal"}`}>
 					{title}

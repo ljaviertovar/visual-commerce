@@ -36,6 +36,7 @@ const RichBannerFull: FC<Props> = ({
 			backgroundRepeat='no-repeat'
 			backgroundSize='cover'
 			backgroundImage={`url(${banner})`}
+			className='borderDiv'
 		>
 			<VStack spacing={8} p='50px' maxW='50%' h='100%' justifyContent='center' alignContent='flex-start'>
 				<Box w='full' color='baseLight'>

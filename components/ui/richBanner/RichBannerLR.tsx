@@ -15,7 +15,7 @@ interface Props {
 
 const RichBannerR: FC<Props> = ({ banner, pretitle, title, subtitle, textButton, linkButton }) => {
 	return (
-		<Box bgGradient='linear-gradient(to right, btnPrimaryBase, btnSecondaryBase)' h='100%'>
+		<Box bgGradient='linear-gradient(to right, btnPrimaryBase, btnSecondaryBase)' h='100%' className='borderDiv'>
 			<Stack spacing={8} direction='row' h='100%'>
 				<VStack spacing={8} p='50px' w='40%' justifyContent='center' alignContent='flex-start'>
 					<Box w='full'>

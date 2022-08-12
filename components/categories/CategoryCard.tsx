@@ -13,6 +13,8 @@ const CategoryCard: FC<Props> = ({ category }) => {
 		<Box
 			height='100%'
 			width='100%'
+			border='1px'
+			borderColor='blackAlpha.900'
 			position='relative'
 			backgroundPosition='center'
 			backgroundRepeat='no-repeat'

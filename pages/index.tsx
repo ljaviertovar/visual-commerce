@@ -27,9 +27,6 @@ const Home: NextPage = () => {
 			<Box as='section' mt={12} mb={8} className='shopSection'>
 				<ProductSlider />
 			</Box>
-			<Box as='section' mt={12} mb={8}>
-				<HeadbandGaranties />
-			</Box>
 			<Box as='section' mt={12} mb={8} h='500px'>
 				<RichBannerLR
 					banner={rBanner1.banner.src}
@@ -40,6 +37,9 @@ const Home: NextPage = () => {
 					linkButton={rBanner1.linkButton}
 					sizeButton='md'
 				/>
+			</Box>
+			<Box as='section' mt={12} mb={8}>
+				<HeadbandGaranties />
 			</Box>
 			<Box as='section' mt={12} mb={8} className='shopSection'>
 				<SliderBrands />
