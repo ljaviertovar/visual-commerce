@@ -12,7 +12,16 @@ const LinkButton: FC<Props> = ({ text, link, size }) => {
 	return (
 		<NextLink href={link} passHref>
 			<Link _hover={{ textDecor: "none" }}>
-				<Button bg={"white"} size={size}>
+				<Button
+					size={size}
+					bgGradient='linear-gradient(to right, btnPrimaryBase 0%, btnSecondaryBase  51%, btnPrimaryBase  100%)'
+					transition='0.5s'
+					backgroundSize='200% auto'
+					color='white'
+					_hover={{
+						backgroundPosition: "right center",
+					}}
+				>
 					{text}
 				</Button>
 			</Link>

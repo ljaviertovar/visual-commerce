@@ -1,6 +1,6 @@
 export interface Category {
 	id: number
-	level: 1 | 2 | 3
+	level: number
 	name: string
 	url: string
 	image: string

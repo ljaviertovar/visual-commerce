@@ -1,15 +1,36 @@
-import { Box, Center, Link } from "@chakra-ui/react"
+import { Center, Link, Flex, Text, Box } from "@chakra-ui/react"
 import NextLink from "next/link"
+import { FC } from "react"
+import LinkButton from "./LinkButton"
 
-const HeadBandShop = () => {
+interface Props {
+	title: string
+	titleSize: string
+	textBtn?: string
+	textLink?: string
+	link: string
+}
+
+const HeadBandShop: FC<Props> = ({ title, textLink, titleSize, link, textBtn }) => {
 	return (
 		<Center w='100%' bg='emphasis'>
-			<Box padding='4' color='baseLight' maxW='lg' textTransform='uppercase' fontSize='sm'>
-				Join the Visual Commerce fam. Explore all promotions{" "}
-				<NextLink href='/' passHref>
-					<Link textDecor='underline'>Here</Link>
-				</NextLink>
-			</Box>
+			<Flex padding='4' maxW='xl' textTransform='uppercase' fontSize='sm' alignItems='center'>
+				<Text fontSize={titleSize} fontWeight={`${textBtn ? "bold" : "normal"}`}>
+					{title}
+				</Text>
+				{textBtn && (
+					<Box ml={4}>
+						<LinkButton text={textBtn} size={"md"} link={link} />
+					</Box>
+				)}
+				{textLink && (
+					<NextLink href={link} passHref>
+						<Link textDecor='underline' marginLeft={2}>
+							{textLink}
+						</Link>
+					</NextLink>
+				)}
+			</Flex>
 		</Center>
 	)
 }

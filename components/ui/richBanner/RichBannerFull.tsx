@@ -1,5 +1,5 @@
-import { Box, Heading, Stack, VStack } from "@chakra-ui/react"
 import { FC } from "react"
+import { Box, Heading, Text, VStack } from "@chakra-ui/react"
 
 import LinkButton from "../LinkButton"
 
@@ -16,7 +16,7 @@ interface Props {
 	linkButton?: string
 }
 
-const RichBanner: FC<Props> = ({
+const RichBannerFull: FC<Props> = ({
 	banner,
 	textCenter,
 	textRight,
@@ -35,21 +35,20 @@ const RichBanner: FC<Props> = ({
 			backgroundPosition='center'
 			backgroundRepeat='no-repeat'
 			backgroundSize='cover'
-			// bgGradient='linear-gradient(to right, secondary, primary)'
 			backgroundImage={`url(${banner})`}
 		>
 			<VStack spacing={8} p='50px' maxW='50%' h='100%' justifyContent='center' alignContent='flex-start'>
-				<Box w='full'>
+				<Box w='full' color='baseLight'>
 					{pretitle && (
-						<Heading as='h5' size='md' mb={2} color='emphasis' className='shadowText'>
+						<Text as='h5' fontSize='lg' fontWeight='bold' mb={2} className='shadowText'>
 							{pretitle}
-						</Heading>
+						</Text>
 					)}
-					<Heading as='h3' size='2xl' mb={4}>
+					<Heading as='h3' size='3xl' mb={4} className='shadowText'>
 						{title}
 					</Heading>
 					{subtitle && (
-						<Heading as='h4' size='xl' mb={4}>
+						<Heading as='h4' size='2xl' mb={4} className='shadowText'>
 							{subtitle}
 						</Heading>
 					)}
@@ -64,4 +63,4 @@ const RichBanner: FC<Props> = ({
 	)
 }
 
-export default RichBanner
+export default RichBannerFull

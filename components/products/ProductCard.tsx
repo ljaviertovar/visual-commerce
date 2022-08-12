@@ -24,7 +24,7 @@ const data = {
 	reviewCount: 34,
 	rating: 4,
 	tags: ["Top"],
-	promotionTags: ["50% descuento"],
+	promotionTags: ["50%"],
 	sizes: ["22", "24", "26"],
 	colors: ["gray"],
 }
@@ -40,10 +40,11 @@ const ProductCard: FC<Props> = ({ id }) => {
 	return (
 		<Box
 			border='1px solid white'
+			// border='1px solid rgba(0,0,0,0.9)'
 			overflow='hidden'
 			pos='relative'
 			maxW='300px'
-			bg='white'
+			// bg='white'
 			m='auto'
 			mb={4}
 			className={`${styles.productCard}`}
@@ -51,7 +52,7 @@ const ProductCard: FC<Props> = ({ id }) => {
 			_hover={{ cursor: "pointer", border: "1px solid black" }}
 			onMouseEnter={() => setIsCardHovered(true)}
 			onMouseLeave={() => setIsCardHovered(false)}
-			bgGradient='linear-gradient(0deg, rgba(255,255,255,0) 20%, rgba(0,0,0,0.2) 100%)'
+			// bgGradient='linear-gradient(0deg, rgba(255,255,255,0) 20%, rgba(0,0,0,0.1) 100%)'
 		>
 			<Flex pos='absolute' justifyContent={"space-between"} w='full' zIndex='10' p={4}>
 				<ProductTagsPromotions promotionTags={data.promotionTags} />
@@ -95,8 +96,18 @@ const ProductCard: FC<Props> = ({ id }) => {
 				</Box>
 
 				<Box pos='absolute' bottom={0} right={0} className={styles.buttonCard} p={4}>
-					<Button bg={"white"} size='sm'>
-						Ver más
+					<Button
+						bg={"white"}
+						size='sm'
+						bgGradient='linear-gradient(to right, btnPrimaryBase 0%, btnSecondaryBase  51%, btnPrimaryBase  100%)'
+						transition='0.5s'
+						backgroundSize='200% auto'
+						color='white'
+						_hover={{
+							backgroundPosition: "right center",
+						}}
+					>
+						Shop now
 					</Button>
 				</Box>
 			</Box>

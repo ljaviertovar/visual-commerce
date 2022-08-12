@@ -15,7 +15,7 @@ interface Props {
 
 const RichBannerR: FC<Props> = ({ banner, pretitle, title, subtitle, textButton, linkButton }) => {
 	return (
-		<Box bgGradient='linear-gradient(to right, secondary, primary)' h='100%'>
+		<Box bgGradient='linear-gradient(to right, btnPrimaryBase, btnSecondaryBase)' h='100%'>
 			<Stack spacing={8} direction='row' h='100%'>
 				<VStack spacing={8} p='50px' w='40%' justifyContent='center' alignContent='flex-start'>
 					<Box w='full'>
@@ -24,11 +24,11 @@ const RichBannerR: FC<Props> = ({ banner, pretitle, title, subtitle, textButton,
 								{pretitle}
 							</Heading>
 						)}
-						<Heading as='h3' size='2xl' mb={4}>
+						<Heading as='h3' size='2xl' mb={4} color='white'>
 							{title}
 						</Heading>
 						{subtitle && (
-							<Heading as='h4' size='xl' mb={4}>
+							<Heading as='h4' size='xl' mb={4} color='white'>
 								{subtitle}
 							</Heading>
 						)}

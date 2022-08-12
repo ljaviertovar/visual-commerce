@@ -2,28 +2,30 @@ import { Box } from "@chakra-ui/react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, EffectFade, Autoplay } from "swiper"
 
+import { RichBannerFull } from "./"
+
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade"
 import "swiper/css/autoplay"
 
-import { RichBannerC } from "./"
+import slider1 from "../../public/img/heroSlider/slider1.jpg"
+import slider2 from "../../public/img/heroSlider/slider2.jpg"
 
 const cards = [
 	{
 		id: 1,
-		banner: "https://shendyvendy.com/wp-content/uploads/2022/05/716A0756-scaled.jpg",
+		banner: slider1.src,
 		pretitle: "Welcome!",
 		title: "Visual Commerce",
 		subtitle: "Choose the best comfort at all times",
 		sizeButton: "lg",
-		textButton: "Comprar ahora",
+		textButton: "Shop now",
 		linkButton: "/",
 	},
 	{
 		id: 2,
-		banner:
-			"https://secureservercdn.net/198.71.233.70/qpd.3b2.myftpupload.com/wp-content/uploads/2022/05/716A0754-scaled.jpg?time=1658699039",
+		banner: slider2.src,
 		pretitle: "Use the cupon",
 		title: "vcrce000",
 		sizeButton: "md",
@@ -52,7 +54,7 @@ const HeroSlider = () => {
 				{cards.map(({ id, banner, pretitle, title, linkButton, subtitle, sizeButton, textButton }) => (
 					<SwiperSlide key={id}>
 						<Box h='600px'>
-							<RichBannerC
+							<RichBannerFull
 								banner={banner}
 								pretitle={pretitle}
 								title={title}

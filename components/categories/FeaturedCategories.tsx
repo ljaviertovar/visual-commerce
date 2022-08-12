@@ -7,14 +7,17 @@ import CategoryCard from "./CategoryCard"
 
 import { Category } from "../../ts/interfaces/product.interface"
 
+import women from "../../public/img/categories/women.jpg"
+import men from "../../public/img/categories/men.jpg"
+import kids from "../../public/img/categories/kids.jpg"
+
 const data = {
 	categories: [
 		{
 			id: 1,
 			level: 1,
 			name: "Men",
-			image:
-				"https://secureservercdn.net/198.71.233.70/qpd.3b2.myftpupload.com/wp-content/uploads/2022/05/716A0754-300x300.jpg",
+			image: men.src,
 			url: "/",
 			totalProducts: 100,
 			featured: true,
@@ -23,8 +26,7 @@ const data = {
 			id: 2,
 			level: 1,
 			name: "Women",
-			image:
-				"https://secureservercdn.net/198.71.233.70/qpd.3b2.myftpupload.com/wp-content/uploads/2022/05/716A0754-300x300.jpg",
+			image: women.src,
 			url: "/",
 			totalProducts: 60,
 			featured: true,
@@ -33,8 +35,7 @@ const data = {
 			id: 3,
 			level: 1,
 			name: "Kids",
-			image:
-				"https://secureservercdn.net/198.71.233.70/qpd.3b2.myftpupload.com/wp-content/uploads/2022/05/716A0754-300x300.jpg",
+			image: kids.src,
 			url: "/",
 			totalProducts: 40,
 			featured: true,
