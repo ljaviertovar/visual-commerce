@@ -1,17 +1,18 @@
+import { useEffect, useRef, useState } from "react"
+import NextLink from "next/link"
+import { Box, IconButton, Link } from "@chakra-ui/react"
+import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons"
+
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Mousewheel, Keyboard, Scrollbar } from "swiper"
 
-import ProductCard from "./ProductCard"
+import { ProductCard } from "./"
+import { TitleSection } from "../ui"
 
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 import "swiper/css/scrollbar"
-import { useEffect, useRef, useState } from "react"
-import { Box, IconButton, Link } from "@chakra-ui/react"
-import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons"
-import { TitleSection } from "../ui"
-import NextLink from "next/link"
 
 const ProductSlider = () => {
 	const [swiperInstance, setSwiperInstance] = useState<any>(null)
@@ -29,7 +30,7 @@ const ProductSlider = () => {
 
 	return (
 		<>
-			<TitleSection title='Destacados' align='center' />
+			<TitleSection title='Los más vendidos' align='center' />
 			<Box pos='relative'>
 				<IconButton
 					className='swiper-button'
@@ -80,13 +81,13 @@ const ProductSlider = () => {
 				>
 					{[...Array(8)].map((_, index) => {
 						return (
-							<SwiperSlide key={index}>
-								<NextLink href='/' passHref>
-									<Link _hover={{ textDecor: "none" }}>
+							<NextLink href='/' passHref key={index}>
+								<Link _hover={{ textDecoration: "none" }}>
+									<SwiperSlide>
 										<ProductCard id={index} />
-									</Link>
-								</NextLink>
-							</SwiperSlide>
+									</SwiperSlide>
+								</Link>
+							</NextLink>
 						)
 					})}
 				</Swiper>

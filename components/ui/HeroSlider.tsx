@@ -1,28 +1,34 @@
-import { Box, Button, Container, Heading, Text, Stack } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, EffectFade, Autoplay } from "swiper"
+
+import { RichBannerFull } from "./"
 
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/effect-fade"
 import "swiper/css/autoplay"
 
-import styles from "../../styles/Ui.module.css"
-import ButtonGradient from "./ButtonGradient"
+import slider1 from "../../public/img/heroSlider/slider1.jpg"
+import slider2 from "../../public/img/heroSlider/slider2.jpg"
 
 const cards = [
 	{
-		title: "shendy vendy",
-		pretitle: "Bienvenido",
-		text: "Elige la mayor comodidad en todo momento.",
-		image: "https://shendyvendy.com/wp-content/uploads/2022/05/716A0756-scaled.jpg",
+		id: 1,
+		banner: slider1.src,
+		pretitle: "Welcome!",
+		title: "Visual Commerce",
+		subtitle: "Choose the best comfort at all times",
+		sizeButton: "lg",
+		textButton: "Shop now",
+		linkButton: "/",
 	},
 	{
-		title: "shve899",
-		pretitle: "Usa el cupón",
-		text: "Los mejores en Snikers.",
-		image:
-			"https://secureservercdn.net/198.71.233.70/qpd.3b2.myftpupload.com/wp-content/uploads/2022/05/716A0754-scaled.jpg?time=1658699039",
+		id: 2,
+		banner: slider2.src,
+		pretitle: "Use the cupon",
+		title: "vcrce000",
+		sizeButton: "md",
 	},
 ]
 
@@ -45,40 +51,18 @@ const HeroSlider = () => {
 				style={{ height: "600px" }}
 				className='swiperHero'
 			>
-				{cards.map(({ title, pretitle, text, image }, index) => (
-					<SwiperSlide key={index}>
-						<Box
-							key={index}
-							position='relative'
-							backgroundPosition='center'
-							backgroundRepeat='no-repeat'
-							backgroundSize='cover'
-							backgroundImage={`url(${image})`}
-							className='SliderItem animate-in'
-						>
-							<Container height='600px' position='relative' maxW='full' centerContent>
-								<Stack
-									spacing={8}
-									position='absolute'
-									top='50%'
-									transform={"translate(0, -50%)"}
-									w={{ base: "80%", md: "50%" }}
-									left='10%'
-								>
-									<Text fontSize={{ base: "md", lg: "lg" }} color='emphasis' mb='-8' fontWeight='extrabold'>
-										{pretitle}
-									</Text>
-									<Heading fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }} color='dark' as='h2'>
-										{title}
-									</Heading>
-									<Text fontSize={{ base: "lg", md: "2xl", lg: "3xl" }} color='dark' fontWeight='medium'>
-										{text}
-									</Text>
-									<Button bg='white' color='base' maxW='fit-content' size='lg'>
-										Comprar ahora
-									</Button>
-								</Stack>
-							</Container>
+				{cards.map(({ id, banner, pretitle, title, linkButton, subtitle, sizeButton, textButton }) => (
+					<SwiperSlide key={id}>
+						<Box h='600px'>
+							<RichBannerFull
+								banner={banner}
+								pretitle={pretitle}
+								title={title}
+								subtitle={subtitle}
+								sizeButton={sizeButton}
+								textButton={textButton}
+								linkButton={linkButton}
+							/>
 						</Box>
 					</SwiperSlide>
 				))}

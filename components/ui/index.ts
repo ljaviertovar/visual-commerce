@@ -13,6 +13,11 @@ import HeroSlider from "./HeroSlider"
 import TitleSection from "./TitleSection"
 import ButtonGradient from "./ButtonGradient"
 import LinkButton from "./LinkButton"
+import HeadbandShop from "./HeadBandShop"
+import SliderBrands from "./SliderBrands"
+import RichBannerLR from "./richBanner/RichBannerLR"
+import RichBannerFull from "./richBanner/RichBannerFull"
+import HeadbandGaranties from "./HeadbandGaranties"
 
 export {
 	HeaderShop,
@@ -30,4 +35,9 @@ export {
 	TitleSection,
 	ButtonGradient,
 	LinkButton,
+	HeadbandShop,
+	SliderBrands,
+	RichBannerLR,
+	RichBannerFull,
+	HeadbandGaranties,
 }
