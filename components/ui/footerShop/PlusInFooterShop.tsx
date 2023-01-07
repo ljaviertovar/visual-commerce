@@ -12,7 +12,7 @@ import {
 	UnorderedList,
 	} from '@chakra-ui/react'
 
-const PlusFooterStore = () => {
+const PlusFooterShop = () => {
 	return (
         <Accordion allowMultiple>
             <AccordionItem>
@@ -111,4 +111,4 @@ const PlusFooterStore = () => {
 	)
 }
 
-export default PlusFooterStore
+export default PlusFooterShop
