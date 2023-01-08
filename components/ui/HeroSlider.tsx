@@ -12,7 +12,19 @@ import "swiper/css/autoplay"
 import slider1 from "../../public/img/heroSlider/slider1.jpg"
 import slider2 from "../../public/img/heroSlider/slider2.jpg"
 
-const cards = [
+type SizeButton = "sm" | "md" | "lg" | "xs"
+interface Card {
+	id: number
+	banner: string
+	pretitle: string
+	title: string
+	subtitle: string
+	sizeButton: SizeButton
+	textButton: string
+	linkButton: string
+}
+
+const cards: Card[] = [
 	{
 		id: 1,
 		banner: slider1.src,
@@ -28,7 +40,10 @@ const cards = [
 		banner: slider2.src,
 		pretitle: "Use the cupon",
 		title: "vcrce000",
+		subtitle: "",
 		sizeButton: "md",
+		textButton: "",
+		linkButton: "",
 	},
 ]
 
